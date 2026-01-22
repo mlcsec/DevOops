@@ -1,0 +1,604 @@
+patterns:
+    # Azure 
+    - pattern:
+        name: Azure DevOps Personal Access Token (PAT)
+        regex: "[0-9a-f]{52}"
+
+    - pattern:
+        name: Azure Connection String
+        regex: "(?i)DefaultEndpointsProtocol=https;AccountName=[a-z0-9]+;AccountKey=[a-zA-Z0-9+/=]+"
+
+    - pattern:
+        name: Azure Client ID
+        regex: "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+
+    - pattern:
+        name: Azure Client Secret
+        regex: "[a-zA-Z0-9~.\\-_]{40}"
+
+    - pattern:
+        name: Azure Access Token
+        regex: "eyJ[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+"
+
+    - pattern:
+        name: Azure Refresh Token
+        regex: "0.AY[A-Za-z0-9-_.+/=]*"
+
+    # AWS 
+    - pattern:
+        name: AWS API Gateway
+        regex: "[0-9a-z]+.execute-api.[0-9a-z._-]+.amazonaws.com"
+
+    - pattern:
+        name: AWS API Key
+        regex: AKIA[0-9A-Z]{16}
+
+    - pattern:
+        name: AWS ARN
+        regex: arn:aws:[a-z0-9-]+:[a-z]{2}-[a-z]+-[0-9]+:[0-9]+:.+
+
+    - pattern:
+        name: AWS Access Key ID Value
+        regex: (A3T[A-Z0-9]|AKIA|AGPA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+
+    - pattern:
+        name: AWS AppSync GraphQL Key
+        regex: da2-[a-z0-9]{26}
+
+    - pattern:
+        name: AWS EC2 External
+        regex: ec2-[0-9a-z._-]+.compute(-1)?.amazonaws.com
+
+    - pattern:
+        name: AWS EC2 Internal
+        regex: "[0-9a-z._-]+.compute(-1)?.internal"
+
+    - pattern:
+        name: AWS ELB
+        regex: "[0-9a-z._-]+.elb.amazonaws.com"
+
+    - pattern:
+        name: AWS ElasticCache
+        regex: "[0-9a-z._-]+.cache.amazonaws.com"
+
+    - pattern:
+        name: AWS MWS ID
+        regex: mzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
+
+    - pattern:
+        name: AWS MWS key
+        regex: amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
+
+    - pattern:
+        name: AWS RDS
+        regex: "[0-9a-z._-]+.rds.amazonaws.com"
+
+    - pattern:
+        name: AWS S3 Bucket
+        regex: s3://[0-9a-z._/-]+
+
+    - pattern:
+        name: AWS client ID
+        regex: (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
+
+    - pattern:
+        name: AWS cred file info
+        regex: (aws_access_key_id|aws_secret_access_key)
+
+    - pattern:
+        name: aws_access
+        regex: aws[_-]?access(=| =|:| :)
+
+    - pattern:
+        name: aws_access_key
+        regex: aws[_-]?access[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: aws_access_key_id - 1
+        regex: aws[_-]?access[_-]?key[_-]?id(=| =|:| :)
+
+    - pattern:
+        name: aws_config_accesskeyid
+        regex: aws[_-]?config[_-]?accesskeyid(=| =|:| :)
+
+    - pattern:
+        name: aws_config_secretaccesskey
+        regex: aws[_-]?config[_-]?secretaccesskey(=| =|:| :)
+
+    - pattern:
+        name: aws_key
+        regex: aws[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: aws_patterns
+        regex: (?:accesskeyid|secretaccesskey|aws_access_key_id|aws_secret_access_key)
+
+    - pattern:
+        name: aws_secret
+        regex: aws[_-]?secret(=| =|:| :)
+
+    - pattern:
+        name: aws_secret_access_key
+        regex: aws[_-]?secret[_-]?access[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: aws_secret_key
+        regex: aws[_-]?secret[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: aws_secrets
+        regex: aws[_-]?secrets(=| =|:| :)
+
+    - pattern:
+        name: aws_ses_access_key_id
+        regex: aws[_-]?ses[_-]?access[_-]?key[_-]?id(=| =|:| :)
+
+    - pattern:
+        name: aws_ses_secret_access_key
+        regex: aws[_-]?ses[_-]?secret[_-]?access[_-]?key(=| =|:| :)
+
+
+    # Google 
+    - pattern:
+        name: Google (GCP) Service Account
+        regex: '"type": "service_account"'
+
+    - pattern:
+        name: Google API Key
+        regex: AIza[0-9a-z-_]{35}
+
+    - pattern:
+        name: Google OAuth Access Token
+        regex: ya29\.[0-9A-Za-z\-_]+
+
+    # Artifactory 
+    - pattern:
+        name: Artifactory - 2
+        regex: ([A-Za-z0-9](?:[A-Za-z0-9\-]{0,61}[A-Za-z0-9])\.jfrog\.io)
+
+    - pattern:
+        name: Artifactory API Token
+        regex: (?:\s|=|:|"|^)AKC[a-zA-Z0-9]{10,}
+
+    - pattern:
+        name: Artifactory Password
+        regex: (?:\s|=|:|"|^)AP[\dABCDEF][a-zA-Z0-9]{8,}
+
+    # db
+    - pattern:
+        name: database_host
+        regex: database[_-]?host(=| =|:| :)
+
+    - pattern:
+        name: database_name
+        regex: database[_-]?name(=| =|:| :)
+
+    - pattern:
+        name: database_password
+        regex: database[_-]?password(=| =|:| :)
+
+    - pattern:
+        name: database_port
+        regex: database[_-]?port(=| =|:| :)
+
+    - pattern:
+        name: database_user
+        regex: database[_-]?user(=| =|:| :)
+
+    - pattern:
+        name: database_username
+        regex: database[_-]?username(=| =|:| :)
+
+    - pattern:
+        name: datadog_api_key
+        regex: datadog[_-]?api[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: datadog_app_key
+        regex: datadog[_-]?app[_-]?key(=| =|:| :)
+
+    - pattern:
+        name: db_connection
+        regex: db[_-]?connection(=| =|:| :)
+
+    - pattern:
+        name: db_database
+        regex: db[_-]?database(=| =|:| :)
+
+    - pattern:
+        name: db_host
+        regex: db[_-]?host(=| =|:| :)
+
+    - pattern:
+        name: db_password
+        regex: db[_-]?password(=| =|:| :)
+
+    - pattern:
+        name: db_pw
+        regex: db[_-]?pw(=| =|:| :)
+
+    - pattern:
+        name: db_user
+        regex: db[_-]?user(=| =|:| :)
+
+    - pattern:
+        name: db_username
+        regex: db[_-]?username(=| =|:| :)
+
+    # Generic 
+    - pattern:
+        name: Generic Host Variable
+        regex: (\$(?:host|server)|(?:HOST|HOSTNAME|SERVER|connection_host|remote_host))\s*[:=]\s*['"][^'"]*['"]
+
+    - pattern:
+        name: Generic Username Variable
+        regex: (\$(?:username|user|login)|(?:USERNAME|LOGIN|USER|db_user|auth_user))\s*[:=]\s*['"][^'"]*['"]
+
+    - pattern:
+        name: Generic Password Variable
+        regex: (\$(?:password|pass|pwd|credential)|(?:PASSWORD|PASS|PWD|db_pass|auth_key))\s*[:=]\s*['"][^'"]{6,}['"]
+
+    - pattern:
+        name: Generic DB Variable
+        regex: (\$(?:database|db|schema)|(?:DATABASE|SCHEMA|db_name|database_connection))\s*[:=]\s*['"][^'"]*['"]
+
+    - pattern:
+        name: Generic Port Variable
+        regex: (\$(?:port|db_port)|(?:PORT|SERVER_PORT|connection_port))\s*[:=]\s*\d{2,5}
+
+    - pattern:
+        name: Generic API Key Variable
+        regex: (\$(?:apiKey|api_key|access_key)|(?:API_?KEY|ACCESS_?KEY|client_key|service_token))\s*[:=]\s*['"][a-zA-Z0-9_\-]{10,}['"]
+
+    - pattern:
+        name: Generic API Secret Variable
+        regex: (\$(?:apiSecret|api_secret|secret_key)|(?:API_?SECRET|ACCESS_?SECRET|client_secret|service_secret))\s*[:=]\s*['"][a-zA-Z0-9+/]{20,}['"]
+
+    - pattern:
+        name: Generic Sensitive Variable
+        regex: (\$(?:secret|token|credentials|auth_token)|(?:SECRET|TOKEN|CREDENTIALS|OAUTH_TOKEN|bearer_token))\s*[:=]\s*['"][a-zA-Z0-9+/]{20,}['"]
+
+    - pattern:
+        name: Generic - 1376
+        regex: jdbc:mysql(=| =|:| :)
+
+    - pattern:
+        name: Generic - 1688
+        regex: TOKEN[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
+
+    - pattern:
+        name: Generic - 1689
+        regex: API[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
+
+    - pattern:
+        name: Generic - 1691
+        regex: SECRET[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
+
+    - pattern:
+        name: Generic - 1692
+        regex: AUTHORIZATION[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
+
+    - pattern:
+        name: Generic - 1693
+        regex: PASSWORD[\\-|_|A-Z0-9]*(\'|\")?(:|=)(\'|\")?[\\-|_|A-Z0-9]{10}
+
+    - pattern:
+        name: Generic - 1695
+        regex: (A|a)(P|p)(Ii)[\-|_|A-Za-z0-9]*(\''|")?( )*(:|=)( )*(\''|")?[0-9A-Za-z\-_]+(\''|")?
+
+    - pattern:
+        name: Generic - 1700
+        regex: BEGIN OPENSSH PRIVATE KEY
+
+    - pattern:
+        name: Generic - 1701
+        regex: BEGIN PRIVATE KEY
+
+    - pattern:
+        name: Generic - 1702
+        regex: BEGIN RSA PRIVATE KEY
+
+    - pattern:
+        name: Generic - 1703
+        regex: BEGIN DSA PRIVATE KEY
+
+    - pattern:
+        name: Generic - 1704
+        regex: BEGIN EC PRIVATE KEY
+
+    - pattern:
+        name: Generic - 1705
+        regex: BEGIN PGP PRIVATE KEY BLOCK
+
+    - pattern:
+        name: Generic - 1707
+        regex: '[a-z0-9.-]+\.s3-[a-z0-9-]\.amazonaws\.com'
+
+    - pattern:
+        name: Generic - 1708
+        regex: '[a-z0-9.-]+\.s3-website[.-](eu|ap|us|ca|sa|cn)'
+
+    - pattern:
+        name: Generic - 1710
+        regex: algolia_api_key
+
+    - pattern:
+        name: Generic - 1711
+        regex: asana_access_token
+
+    - pattern:
+        name: Generic - 1713
+        regex: azure_tenant
+
+    - pattern:
+        name: Generic - 1714
+        regex: bitly_access_token
+
+    - pattern:
+        name: Generic - 1715
+        regex: branchio_secret
+
+    - pattern:
+        name: Generic - 1716
+        regex: browserstack_access_key
+
+    - pattern:
+        name: Generic - 1717
+        regex: buildkite_access_token
+
+    - pattern:
+        name: Generic - 1718
+        regex: comcast_access_token
+
+    - pattern:
+        name: Generic - 1719
+        regex: datadog_api_key
+
+    - pattern:
+        name: Generic - 1720
+        regex: deviantart_secret
+
+    - pattern:
+        name: Generic - 1721
+        regex: deviantart_access_token
+
+    - pattern:
+        name: Generic - 1722
+        regex: dropbox_api_token
+
+    - pattern:
+        name: Generic - 1723
+        regex: facebook_appsecret
+
+    - pattern:
+        name: Generic - 1724
+        regex: facebook_access_token
+
+    - pattern:
+        name: Generic - 1725
+        regex: firebase_custom_token
+
+    - pattern:
+        name: Generic - 1726
+        regex: firebase_id_token
+
+    - pattern:
+        name: Generic - 1727
+        regex: github_client
+
+    - pattern:
+        name: Generic - 1728
+        regex: github_ssh_key
+
+    - pattern:
+        name: Generic - 1730
+        regex: gitlab_private_token
+
+    - pattern:
+        name: Generic - 1731
+        regex: google_cm
+
+    - pattern:
+        name: Generic - 1732
+        regex: google_maps_key
+
+    - pattern:
+        name: Generic - 1733
+        regex: heroku_api_key
+
+    - pattern:
+        name: Generic - 1734
+        regex: instagram_access_token
+
+    - pattern:
+        name: Generic - 1735
+        regex: mailchimp_api_key
+
+    - pattern:
+        name: Generic - 1736
+        regex: mailgun_api_key
+
+    - pattern:
+        name: Generic - 1737
+        regex: mailjet
+
+    - pattern:
+        name: Generic - 1738
+        regex: mapbox_access_token
+
+    - pattern:
+        name: Generic - 1739
+        regex: pagerduty_api_token
+
+    - pattern:
+        name: Generic - 1740
+        regex: paypal_key_sb
+
+    - pattern:
+        name: Generic - 1741
+        regex: paypal_key_live
+
+    - pattern:
+        name: Generic - 1742
+        regex: paypal_token_sb
+
+    - pattern:
+        name: Generic - 1743
+        regex: paypal_token_live
+
+    - pattern:
+        name: Generic - 1744
+        regex: pendo_integration_key
+
+    - pattern:
+        name: Generic - 1745
+        regex: salesforce_access_token
+
+    - pattern:
+        name: Generic - 1746
+        regex: saucelabs_ukey
+
+    - pattern:
+        name: Generic - 1747
+        regex: sendgrid_api_key
+
+    - pattern:
+        name: Generic - 1748
+        regex: slack_api_token
+
+    - pattern:
+        name: Generic - 1749
+        regex: slack_webhook
+
+    - pattern:
+        name: Generic - 1750
+        regex: square_secret
+
+    - pattern:
+        name: Generic - 1751
+        regex: square_auth_token
+
+    - pattern:
+        name: Generic - 1752
+        regex: travisci_api_token
+
+    - pattern:
+        name: Generic - 1753
+        regex: twilio_sid_token
+
+    - pattern:
+        name: Generic - 1754
+        regex: twitter_api_secret
+
+    - pattern:
+        name: Generic - 1755
+        regex: twitter_bearer_token
+
+    - pattern:
+        name: Generic - 1756
+        regex: spotify_access_token
+
+    - pattern:
+        name: Generic - 1757
+        regex: stripe_key_live
+
+    - pattern:
+        name: Generic - 1758
+        regex: wakatime_api_key
+
+    - pattern:
+        name: Generic - 1759
+        regex: wompi_auth_bearer_sb
+
+    - pattern:
+        name: Generic - 1760
+        regex: wompi_auth_bearer_live
+
+    - pattern:
+        name: Generic - 1761
+        regex: wpengine_api_key
+
+    - pattern:
+        name: Generic - 1762
+        regex: zapier_webhook
+
+    - pattern:
+        name: Generic - 1763
+        regex: zendesk_access_token
+
+    - pattern:
+        name: Generic - 1764
+        regex: ssh-rsa
+
+    - pattern:
+        name: Generic - 1765
+        regex: s3-[a-z0-9-]+\.amazonaws\.com/[a-z0-9._-]+
+
+    - pattern:
+        name: Generic Secret
+        regex: '[sS][eE][cC][rR][eE][tT].*[''|"][0-9a-zA-Z]{32,45}[''|"]'
+
+    # GitHub
+    - pattern:
+        name: GitHub
+        regex: '[gG][iI][tT][hH][uU][bB].*[''|"][0-9a-zA-Z]{35,40}[''|"]'
+        
+    - pattern:
+        name: Github - 2
+        regex: \b((?:ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36,255}\b)
+        
+    - pattern:
+        name: Github App Token
+        regex: (ghu|ghs)_[0-9a-zA-Z]{36}
+        
+    - pattern:
+        name: Github OAuth Access Token
+        regex: gho_[0-9a-zA-Z]{36}
+        
+    - pattern:
+        name: Github Personal Access Token
+        regex: ghp_[0-9a-zA-Z]{36}
+        
+    - pattern:
+        name: Github Refresh Token
+        regex: ghr_[0-9a-zA-Z]{76}
+        
+    - pattern:
+        name: Github_old
+        regex: (?:github)[^\.].{0,40}[ =:'"]+([a-f0-9]{40})\b
+        
+    - pattern:
+        name: Githubapp - 1
+        regex: (?:github).{0,40}\b([0-9]{6})\b
+        
+    - pattern:
+        name: Githubapp - 2
+        regex:
+            (?:github).{0,40}(-----BEGIN RSA PRIVATE KEY-----\s[A-Za-z0-9+\/\s]*\s-----END
+            RSA PRIVATE KEY-----)
+        
+    - pattern:
+        name: Gitlab
+        regex: (?:gitlab).{0,40}\b([a-zA-Z0-9\-=_]{20,22})\b
+        
+    - pattern:
+        name: Gitlabv2
+        regex: \b(glpat-[a-zA-Z0-9\-=_]{20,22})\b
+        
+
+    # Postgresql
+    - pattern:
+        name: postgres_env_postgres_db
+        regex: postgres[_-]?env[_-]?postgres[_-]?db(=| =|:| :)
+
+    - pattern:
+        name: postgres_env_postgres_password
+        regex: postgres[_-]?env[_-]?postgres[_-]?password(=| =|:| :)
+
+    - pattern:
+        name: postgresql_db
+        regex: postgresql[_-]?db(=| =|:| :)
+
+    - pattern:
+        name: postgresql_pass
+        regex: postgresql[_-]?pass(=| =|:| :)
